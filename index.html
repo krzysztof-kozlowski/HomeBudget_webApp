@@ -19,6 +19,7 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css_fontello/fontello.css">
 
     <!--[if lt IE 9]>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -30,11 +31,144 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <header>
+
+        <nav class="navbar bg-white navbar-light navbar-expand-lg">
+
+            <a class="navbar-brand" href="#">
+                <img src="img/logo_obraz.png" class="d-inline-block mr-1 align-bottom" alt="" width="auto" height="auto" />
+                <h1 class="d-none d-sm-inline-block">HomeBudget</h1>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu"
+                aria-expended="false" aria-label="Przełącznik nawigacji">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="main-menu">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"> Pomoc </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> O autorze </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> Zarejestruj się </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> Zaloguj </a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main>
+        <div class="container-fluid">
+            <section>
+
+                <div class="row" id="main-description">
+
+                    <header class="col-md-6">
+
+                        <h1>Zarządzaj swoimi <br />finansami</h1>
+                        <p>Przejmij kontrolę nad swoimi pieniędzmi dzięki możliwości dodawania swoich przychodów i
+                            wydatków.</p>
+                        <button class="btn btn-white bg-white" type="submit">Zarejestruj się</button>
+
+                    </header>
+
+                    <div class="d-none d-md-block col-md-6">
+                        <img src="img/responsive_design.png" alt="Responsive Design" class="img-fluid" />
+                    </div>
+
+                </div>
+
+                <div class="row program-features-description">
+
+                    <div class="d-none d-md-block col-md-6">
+                        <img src="img/gears.png" alt="Analysis - success" class="img-fluid" />
+                    </div>
+
+                    <div class="col-md-6">
+                        <p>
+                            <b>Wskaż</b> swoim pieniądzom odpowiednią<br /> <b>drogę</b>, zanim znikną z Twojego konta<br />
+                            nie zauważone.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="row program-features-description">
+
+                    <div class="col-md-6">
+                        <p>
+                            <b>Analizuj</b> swoje wydatki według kategorii,<br />które możesz planować zgodnie ze<br />swoimi
+                            potrzebami.
+                        </p>
+                    </div>
+
+                    <div class="d-none d-md-block col-md-6">
+                        <img src="img/analysis.png" alt="Analysis - success" class="img-fluid" />
+                    </div>
+
+                </div>
+
+                <div class="row program-features-description">
+
+                    <div class="d-none d-md-block col-md-6">
+                        <img src="img/where.png" alt="Analysis - success" class="img-fluid" />
+                    </div>
+
+                    <div class="col-md-6">
+                        <p>
+                            Buduj swoją nową przyszłość<br /><b>gdziekolwiek jesteś.</b>
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="row program-features-description">
+
+                    <div class="col-md-6">
+                        <p>
+                            Zarejestruj się i <b>przejmij kontrolę</b> właśnie teraz!
+                        </p>
+                    </div>
+
+                    <div class="col-md-6">
+                        <button class="btn btn-white bg-white" type="submit">Zarejestruj się</button>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <footer>
+                <div class="row">
+
+                    <div class="col-md-9">
+                        <span><b>2018 &copy; Krzysztof Kozłowski</b> Wszelkie prawa zastrzeżone</span>
+                    </div>
+
+                    <div class="col-md-2">
+                        <a href="https://pl.linkedin.com/in/krzysztofkozlowski1" target="_blank"><i class="demo-icon icon-linkedin"></i></a>
+                        <a href="https://github.com/krzysztof-kozlowski" target="_blank"><i class="demo-icon icon-github"></i></a>
+                    </div>
+
+                </div>
+            </footer>
+
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="js/bootstrap.min.js"></script>
 
 </body>
 
