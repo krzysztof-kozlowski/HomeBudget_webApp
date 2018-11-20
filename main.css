@@ -154,6 +154,20 @@ footer a:hover {
     color: #163411;
 }
 
+@media screen and (min-width: 992px) {
+    .collapse ul li:nth-child(4) {
+        background-color: #33A835;
+        border-radius: 5px;
+    }
+
+    .collapse ul li:nth-child(4) a {
+        color: #fff !important;
+    }
+
+    .collapse ul li:nth-child(4):hover {
+        box-shadow: 0px 0px 7px 3px #385633;
+    }
+}
 
 @media screen and (max-width: 768px) {
     .program-features-description div p {
