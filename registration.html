@@ -33,7 +33,7 @@
             <div class="row">
                 <header>
 
-                    <img src="img/logo_obraz.png" alt="" />
+                    <img src="img/logo_obraz.png" alt="" class="img-fluid align-bottom"/>
                     <h1>HomeBudget</h1>
                     <p>Zarządzaj swoimi pieniędzmi</p>
                 </header>
@@ -42,13 +42,26 @@
                 <section>
                     <form>
 
+                        <input type="text" placeholder="imię" onfocus="this.placeholder=''" onblur="this.placeholder='imię'">
+
                         <input type="text" placeholder="login" onfocus="this.placeholder=''" onblur="this.placeholder='login'">
 
-                        <input type="password" placeholder="password" onfocus="this.placeholder=''" onblur="this.placeholder='password'">
+                        <input type="text" placeholder="adres email" onfocus="this.placeholder=''" onblur="this.placeholder='adres email'">
 
-                        <input type="submit" value="Zaloguj się">
+                        <input type="password" placeholder="hasło" onfocus="this.placeholder=''" onblur="this.placeholder='hasło'">
+
+                        <input type="submit" value="Kontynuuj">
 
                     </form>
+                </section>
+
+                <section>
+                    <p>
+                        Masz już konto?
+                    </p>
+                    <p>
+                        <a href="#"> Zaloguj się </a>
+                    </p>
                 </section>
             </div>
         </div>
