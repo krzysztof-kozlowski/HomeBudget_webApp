@@ -9,8 +9,8 @@ body {
 .container {
     background-color: #ffffff;
     width: 600px;
-    height: 100vh;
-    padding: 30px;
+    height: 100%;
+    padding: 30px 30px 0 30px;
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0px 0px 5px 5px rgba(125,115,125,0.8);
@@ -87,9 +87,7 @@ input[type=submit]:focus {
 }
 
 section:nth-child(2) {
-    margin-top: 75px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 66px auto 0 auto;
 }
 
 section p {
@@ -113,5 +111,9 @@ section a:hover {
 @media screen and (max-width: 768px) {
     .container {
         width: 100%;
+    }
+
+    input {
+        width: 250px !important;
     }
 }
