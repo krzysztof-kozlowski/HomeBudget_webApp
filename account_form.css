@@ -1,0 +1,159 @@
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #33A835;
+}
+
+main {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+.container {
+    background-color: #ffffff;
+    min-height: 100%;
+    padding: 30px 30px 0 30px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 5px 5px rgba(125,115,125,0.8);
+}
+
+header {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header h1 {
+    display: inline-block;
+    color:  #33A835;
+    font-size: 26px;
+}
+
+header p {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #385623;
+}
+
+header a:hover {
+    text-decoration: none;
+}
+
+form {
+    text-align: center;
+}
+
+input[type=text],
+input[type=password] {
+    width: 100%;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f2f2f2;
+    color: #666;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 15px;    
+    padding: 5px;
+    box-sizing: border-box;
+    outline: none;
+    margin-top: 10px;
+}
+
+input[type=text]:focus,
+input[type=password]:focus {
+    box-shadow: 0px 0px 7px 3px #385633;   
+    border: 2px solid #a5cda5;
+    background-color: #e9f3e9;
+    color: #385623; 
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #36b03c;
+    font-size: 18px;
+    color: #ffffff;
+    padding: 10px 5px;
+    margin-top: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    outline: none;
+}
+
+input[type=submit]:hover {
+    background-color: #37b93d;
+    box-shadow: 0px 0px 7px 3px #385633;
+}
+
+input[type=submit]:focus {
+    box-shadow: 0px 0px 7px 3px #385633;   
+}
+
+section:nth-child(2) {
+    margin: 66px auto 0 auto;
+}
+
+section p {
+    text-align: center;
+    color: #385623;
+}
+
+section a {
+    text-decoration: none;
+    color: #385623;
+    font-weight: bold;
+}
+
+section a:hover {
+    color: #163411;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 576px) {
+    input {
+        width: 75% !important;
+    }
+    
+    header h1 {
+        font-size: 30px;
+    }
+
+@media screen and (min-width: 768px) {
+    main {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 15%;
+        left: 15%;
+        width: 70%;
+    }
+
+    input {
+        width: 65% !important;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    main {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 20%;
+        left: 20%;
+        width: 60%;
+    }
+
+    input {
+        width: 50% !important;
+    }
+}
