@@ -13,7 +13,7 @@ body {
 }
 
 .collapse ul li a:hover {
-    color: #163411 !important;
+    color: #385633 !important;
 }
 
 .navbar-brand h1 {
@@ -28,12 +28,29 @@ body {
     margin-left: 0;
 }
 
+.container-fluid .row:nth-child(3)  {
+    background-color: #A2D7A3 !important;
+}
+
+.container-fluid .row:nth-child(5)  {
+    background-color: #A2D7A3 !important;
+}
+
+.container-fluid .row:nth-child(5) p {
+    margin: 15px;
+    padding: 0;
+}
+
 .row {
     margin: 0;
     padding: 0;
 }
 
-#main-description {
+button:hover {
+    box-shadow: 0px 0px 10px 5px rgba(56,86,35,0.7);
+}
+
+#program-main-description {
     margin-left: 0;
     width: 100%;
     background-color: #33A835;
@@ -41,29 +58,35 @@ body {
     padding: 20px;
 }
 
-#main-description h1 {
+#program-main-description h1 {
     color: #ffffff;
     font-size: 40px;
     margin-top: 10px;
     margin-bottom: 20px;
 }
 
-#main-description p {
+#program-main-description p {
     color: #ffffff;
     font-size: 15px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-#main-description button {
+#program-main-description button {
     color: #33A835;
     margin-top: 20px;
     margin-bottom: 10px;
     font-weight: bold;
 }
 
-button:hover {
-    box-shadow: 0px 0px 10px 5px rgba(56,86,35,0.7);
+#program-main-description img {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
 }
 
 .program-features-description button {
@@ -79,16 +102,6 @@ button:hover {
     margin: 12px auto;
 }
 
-#main-description img {
-    position: absolute;
-    display: block;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-}
-
 .program-features-description {
     margin-top: 0;
     margin-left: 0;
@@ -98,19 +111,6 @@ button:hover {
 
 .program-features-description p {
     text-align: center;
-}
-
-.container-fluid .row:nth-child(3)  {
-    background-color: #A2D7A3 !important;
-}
-
-.container-fluid .row:nth-child(5)  {
-    background-color: #A2D7A3 !important;
-}
-
-.container-fluid .row:nth-child(5) p {
-    margin: 15px;
-    padding: 0;
 }
 
 .program-features-description img {
@@ -154,6 +154,20 @@ footer a:hover {
     color: #163411;
 }
 
+@media screen and (min-width: 992px) {
+    .collapse ul li:nth-child(4) {
+        background-color: #33A835;
+        border-radius: 5px;
+    }
+
+    .collapse ul li:nth-child(4) a {
+        color: #fff !important;
+    }
+
+    .collapse ul li:nth-child(4):hover {
+        box-shadow: 0px 0px 7px 3px #385633;
+    }
+}
 
 @media screen and (max-width: 768px) {
     .program-features-description div p {
