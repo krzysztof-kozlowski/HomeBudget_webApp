@@ -1,0 +1,104 @@
+body {
+    min-height: 100%;
+}
+
+#period-datepicker {
+    background-color: #33A835;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+#period-datepicker .input-sm {
+    background-color: #f2f2f2;
+    color: #666;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 15px;    
+    padding: 5px;
+}
+
+#period-datepicker .input-sm:focus {
+    box-shadow: 0px 0px 7px 3px #385633;   
+    border: 2px solid #a5cda5;
+    background-color: #e9f3e9;
+    color: #385623; 
+}
+
+.form-item {
+    padding: 5px;
+}
+
+.dropdown {
+    padding: 5px;
+}
+
+.dropdown button {
+    width: 90%;
+    background-color: #f2f2f2;
+    color: #666;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 15px;    
+    padding: 5px;
+}
+
+.dropdown-menu li {
+    width: 200px;
+}
+
+.dropdown-menu a {
+    color: #666;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    color: #666;
+    text-decoration: none;
+}
+
+.main-content {
+    min-height: 100%;
+    background-color: #A2D7A3;
+}
+
+#piechart1 {
+    width: 100%; 
+    min-height: 350px;
+}
+
+#piechart2 {
+    width: 100%; 
+    min-height: 350px;
+}
+
+.moneyList {
+    margin-top: 5px;
+    color: #385623;
+    font-size: 14px;
+}
+
+.moneyList p {
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#incomesList {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+#incomesList td {
+    border-bottom: 1px dashed rgb(156, 156, 156);
+}
+
+#expensesList {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+#expensesList td {
+    border-bottom: 1px dashed rgb(156, 156, 156);
+}
