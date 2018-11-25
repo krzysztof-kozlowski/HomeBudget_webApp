@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="user_menu.css">
+    <link rel="stylesheet" href="css_fontello/fontello.css">
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -128,16 +129,16 @@
     </nav>
 
     <div class="container-fluid">
-        <div class="row input-daterange input-group" id="period-datepicker">
+        <div class="row input-daterange input-group justify-content-center" id="period-datepicker">
 
-            <div class="col-sm-6 col-md-4 col-lg-2">
+            <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="form-item text-center">
                     <input class="input-sm form-control" type="text" id="start-date" name="start" placeholder="Wybierz datę startową"
                         data-date-format="YYYY, MM, DD" onblur="this.placeholder='Wybierz datę startową'" />
                     <span class="date-text date-start"></span>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-4 col-lg-2">
+            <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="form-item text-center">
                     <input class="input-sm form-control" type="text" id="end-date" name="end" placeholder="Wybierz datę końcową"
                         data-date-format="DD, MM d" onblur="this.placeholder='Wybierz datę końcową'" /><span class="date-text date-end"></span>
@@ -160,15 +161,15 @@
         <div class="row main-content">
             <div class="col-12">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-md-6">
                         <div id="piechart1"></div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-md-6">
                         <div id="piechart2"></div>
                     </div>
                 </div>
             </div>
-            <div class="col-12 moneyList">
+            <div class="col-md-6 moneyList">
                 <p>Lista przychodów</p>
                 <table id="incomesList">
                     <tr>
@@ -188,7 +189,7 @@
                     </tr>
                 </table>
             </div>
-            <div class="col-12 moneyList">
+            <div class="col-md-6 moneyList">
                 <p>Lista wydatków</p>
                 <table id="expensesList">
                     <tr>
@@ -226,7 +227,20 @@
         </div>
     </div>
 
+    <footer>
+        <div class="row">
 
+            <div class="col-md-9">
+                <span><b>2018 &copy; Krzysztof Kozłowski</b> Wszelkie prawa zastrzeżone</span>
+            </div>
+
+            <div class="col-md-2">
+                <a href="https://pl.linkedin.com/in/krzysztofkozlowski1" target="_blank"><i class="demo-icon icon-linkedin"></i></a>
+                <a href="https://github.com/krzysztof-kozlowski" target="_blank"><i class="demo-icon icon-github"></i></a>
+            </div>
+
+        </div>
+    </footer>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
