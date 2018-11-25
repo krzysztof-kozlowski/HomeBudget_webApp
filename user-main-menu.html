@@ -24,7 +24,65 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="javascript.js"></script>
+
+    <script>
+        // Load google charts
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawExpensesChart);
+        google.charts.setOnLoadCallback(drawBudgetChart);
+
+        // Draw the chart and set the chart values
+        function drawExpensesChart() {
+            var dataExpenses = google.visualization.arrayToDataTable([
+                ['Expense', 'amount'],
+                ['Rachunki', 1543.45],
+                ['Paliwo', 675.45],
+                ['Wydatki podstawowe', 1785.33],
+                ['Rozrywka', 326.78],
+                ['Inwestycje', 789.56]
+            ]);
+
+            // Optional; add a title and set the width and height of the chart
+            var options1 = {
+                'title': 'Wydatki', 'titleTextStyle': {
+                    color: '#385623', fontSize: 18, bold: true
+                }, 'legend': 'none', 'backgroundColor': '#A2D7A3'
+            };
+
+            // Display the chart inside the <div> element with id="piechart"
+            var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
+            chart.draw(dataExpenses, options1);
+        }
+
+        function drawBudgetChart() {
+            var dataBudget = google.visualization.arrayToDataTable([
+                ['Budget', 'amount'],
+                ['Pozostały budżet', 250.00],
+                ['Wydatki', 3750.00],
+            ]);
+
+            // Optional; add a title and set the width and height of the chart
+            var options2 = {
+                'title': 'Budżet miesięczny', 'titleTextStyle': {
+                    color: '#385623', fontSize: 18, bold: true
+                }, 'legend': 'none', 'backgroundColor': '#A2D7A3'
+            };
+
+            // Display the chart inside the <div> element with id="piechart"
+            var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
+            chart.draw(dataBudget, options2);
+        }
+
+
+        $(window).resize(function () {
+            drawExpensesChart();
+            drawBudgetChart();
+        });
+    </script>
+
+
 
     <!--[if lt IE 9]>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -76,7 +134,7 @@
                 <div class="form-item text-center">
                     <input class="input-sm form-control" type="text" id="start-date" name="start" placeholder="Wybierz datę startową"
                         data-date-format="YYYY, MM, DD" onblur="this.placeholder='Wybierz datę startową'" />
-                        <span class="date-text date-start"></span>
+                    <span class="date-text date-start"></span>
                 </div>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-2">
@@ -87,19 +145,83 @@
             </div>
 
             <div class="dropdown col-sm-6 col-md-4 col-lg-2 text-center">
-                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Wybierz okres
+                <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Wybierz okres
                     <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Bieżący miesiąc</a></li>
-                      <li><a href="#">Poprzedni miesiąc</a></li>
-                      <li><a href="#">Bieżący rok</a></li>
-                    </ul>
-                  </div> 
-
-
-
+                <ul class="dropdown-menu">
+                    <li><a href="#">Bieżący miesiąc</a></li>
+                    <li><a href="#">Poprzedni miesiąc</a></li>
+                    <li><a href="#">Bieżący rok</a></li>
+                </ul>
+            </div>
         </div>
     </div>
+
+    <div class="container-fluid">
+        <div class="row main-content">
+            <div class="col-md-4">
+                <div class="col">
+                    <div id="piechart1"></div>
+                </div>
+                <div class="col">
+                    <div id="piechart2"></div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                Lista przychodów
+                <table id="incomesList">
+                    <tr>
+                        <td>Data</td>
+                        <td>Kategoria</td>
+                        <td>Kwota</td>
+                    </tr>
+                    <tr>
+                        <td>2018-11-01</td>
+                        <td>Wynagrodzenie</td>
+                        <td>3500.00</td>
+                    </tr>
+                    <tr>
+                        <td>2018-11-15</td>
+                        <td>Przychód dodatkowy - 500+</td>
+                        <td>500.00</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-4">
+                Lista wydatków
+                <table id="expensesList">
+                    <tr>
+                        <td>Data</td>
+                        <td>Kategoria</td>
+                        <td>Kwota</td>
+                    </tr>
+                    <tr>
+                        <td>2018-11-04</td>
+                        <td>Rachunki</td>
+                        <td>1543.45</td>
+                    </tr>
+                    <tr>
+                        <td>2018-11-07</td>
+                        <td>Paliwo</td>
+                        <td>675.45</td>
+                    </tr>
+                    <tr>
+                        <td>2018-11-12</td>
+                        <td>Wydatki podstawowe</td>
+                        <td>1785.33</td>
+                    </tr>
+                    <tr>
+                        <td>2018-11-16</td>
+                        <td>Rozrywka</td>
+                        <td>326.78</td>
+                    </tr>
+                    <tr>
+                        <td>2018-11-20</td>
+                        <td>Inwestycje</td>
+                        <td>789.56</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </div>
 
 
@@ -108,6 +230,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="chart.js"></script>
 
 
 </body>
