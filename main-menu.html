@@ -17,7 +17,7 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="user_menu.css">
+    <link rel="stylesheet" href="user-menu.css">
     <link rel="stylesheet" href="css_fontello/fontello.css">
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -116,7 +116,7 @@
                     <a class="nav-link" href="#"> Dodaj wydatek </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> Przeglądaj bilans </a>
+                    <a class="nav-link" href="money-report.html"> Przeglądaj bilans </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"> Ustawienia </a>
@@ -127,105 +127,6 @@
             </ul>
         </div>
     </nav>
-
-    <div class="container-fluid">
-        <div class="row input-daterange input-group justify-content-center" id="period-datepicker">
-
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="form-item text-center">
-                    <input class="input-sm form-control" type="text" id="start-date" name="start" placeholder="Wybierz datę startową"
-                        data-date-format="YYYY, MM, DD" onblur="this.placeholder='Wybierz datę startową'" />
-                    <span class="date-text date-start"></span>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="form-item text-center">
-                    <input class="input-sm form-control" type="text" id="end-date" name="end" placeholder="Wybierz datę końcową"
-                        data-date-format="DD, MM d" onblur="this.placeholder='Wybierz datę końcową'" /><span class="date-text date-end"></span>
-                </div>
-            </div>
-
-            <div class="dropdown col-sm-6 col-md-4 col-lg-2 text-center">
-                <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Wybierz okres
-                    <span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Bieżący miesiąc</a></li>
-                    <li><a href="#">Poprzedni miesiąc</a></li>
-                    <li><a href="#">Bieżący rok</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid">
-        <div class="row main-content">
-            <div class="col-12">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div id="piechart1"></div>
-                    </div>
-                    <div class="col-md-6">
-                        <div id="piechart2"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 moneyList">
-                <p>Lista przychodów</p>
-                <table id="incomesList">
-                    <tr>
-                        <th>Data</th>
-                        <th>Kategoria</th>
-                        <th>Kwota</th>
-                    </tr>
-                    <tr>
-                        <td>2018-11-01</td>
-                        <td>Wynagrodzenie</td>
-                        <td>3500.00</td>
-                    </tr>
-                    <tr>
-                        <td>2018-11-15</td>
-                        <td>Przychód dodatkowy - 500+</td>
-                        <td>500.00</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="col-md-6 moneyList">
-                <p>Lista wydatków</p>
-                <table id="expensesList">
-                    <tr>
-                        <th>Data</th>
-                        <th>Kategoria</th>
-                        <th>Kwota</th>
-                    </tr>
-                    <tr>
-                        <td>2018-11-04</td>
-                        <td>Rachunki</td>
-                        <td>1543.45</td>
-                    </tr>
-                    <tr>
-                        <td>2018-11-07</td>
-                        <td>Paliwo</td>
-                        <td>675.45</td>
-                    </tr>
-                    <tr>
-                        <td>2018-11-12</td>
-                        <td>Wydatki podstawowe</td>
-                        <td>1785.33</td>
-                    </tr>
-                    <tr>
-                        <td>2018-11-16</td>
-                        <td>Rozrywka</td>
-                        <td>326.78</td>
-                    </tr>
-                    <tr>
-                        <td>2018-11-20</td>
-                        <td>Inwestycje</td>
-                        <td>789.56</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </div>
 
     <footer>
         <div class="row">
