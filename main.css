@@ -155,16 +155,14 @@ footer a:hover {
 }
 
 @media screen and (min-width: 992px) {
-    .collapse ul li:nth-child(4) {
+    .collapse .special {
         background-color: #33A835;
+        color: #fff !important;
         border-radius: 5px;
     }
 
-    .collapse ul li:nth-child(4) a {
+    .collapse .special:hover {
         color: #fff !important;
-    }
-
-    .collapse ul li:nth-child(4):hover {
         box-shadow: 0px 0px 7px 3px #385633;
     }
 }

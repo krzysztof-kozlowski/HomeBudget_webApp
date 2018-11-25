@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="pl">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HomeBudget</title>
+    <meta name="description" content="Zarządzaj swoimi finansami dzięki aplikacji HomeBudget">
+    <meta name="keywords" content="budżet, domowy, finanse, przychody, dochody, wydatki, analiza, zarządzanie, pieniądze">
+    <meta name="author" content="Krzysztof Kozłowski">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="user_menu.css">
+    <link rel="stylesheet" href="css_fontello/fontello.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="javascript.js"></script>
+
+    <script>
+        // Load google charts
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawExpensesChart);
+        google.charts.setOnLoadCallback(drawBudgetChart);
+
+        // Draw the chart and set the chart values
+        function drawExpensesChart() {
+            var dataExpenses = google.visualization.arrayToDataTable([
+                ['Expense', 'amount'],
+                ['Rachunki', 1543.45],
+                ['Paliwo', 675.45],
+                ['Wydatki podstawowe', 1785.33],
+                ['Rozrywka', 326.78],
+                ['Inwestycje', 789.56]
+            ]);
+
+            // Optional; add a title and set the width and height of the chart
+            var options1 = {
+                'title': 'Wydatki', 'titleTextStyle': {
+                    color: '#385623', fontSize: 18, bold: true
+                }, 'legend': 'none', 'backgroundColor': '#A2D7A3'
+            };
+
+            // Display the chart inside the <div> element with id="piechart"
+            var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
+            chart.draw(dataExpenses, options1);
+        }
+
+        function drawBudgetChart() {
+            var dataBudget = google.visualization.arrayToDataTable([
+                ['Budget', 'amount'],
+                ['Pozostały budżet', 250.00],
+                ['Wydatki', 3750.00],
+            ]);
+
+            // Optional; add a title and set the width and height of the chart
+            var options2 = {
+                'title': 'Budżet miesięczny', 'titleTextStyle': {
+                    color: '#385623', fontSize: 18, bold: true
+                }, 'legend': 'none', 'backgroundColor': '#A2D7A3'
+            };
+
+            // Display the chart inside the <div> element with id="piechart"
+            var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
+            chart.draw(dataBudget, options2);
+        }
+
+
+        $(window).resize(function () {
+            drawExpensesChart();
+            drawBudgetChart();
+        });
+    </script>
+
+
+
+    <!--[if lt IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <nav class="navbar bg-white navbar-light navbar-expand-lg">
+
+        <a class="navbar-brand" href="index.html">
+            <img src="img/logo_obraz.png" class="d-inline-block mr-1 align-bottom" alt="" />
+            <h1 class="d-none d-sm-inline-block">HomeBudget</h1>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu"
+            aria-label="Navigation toggler">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="main-menu">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"> Dodaj przychód </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> Dodaj wydatek </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> Przeglądaj bilans </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> Ustawienia </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link special" href="#"> Wyloguj </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row input-daterange input-group justify-content-center" id="period-datepicker">
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="form-item text-center">
+                    <input class="input-sm form-control" type="text" id="start-date" name="start" placeholder="Wybierz datę startową"
+                        data-date-format="YYYY, MM, DD" onblur="this.placeholder='Wybierz datę startową'" />
+                    <span class="date-text date-start"></span>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="form-item text-center">
+                    <input class="input-sm form-control" type="text" id="end-date" name="end" placeholder="Wybierz datę końcową"
+                        data-date-format="DD, MM d" onblur="this.placeholder='Wybierz datę końcową'" /><span class="date-text date-end"></span>
+                </div>
+            </div>
+
+            <div class="dropdown col-sm-6 col-md-4 col-lg-2 text-center">
+                <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Wybierz okres
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Bieżący miesiąc</a></li>
+                    <li><a href="#">Poprzedni miesiąc</a></li>
+                    <li><a href="#">Bieżący rok</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row main-content">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div id="piechart1"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div id="piechart2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 moneyList">
+                <p>Lista przychodów</p>
+                <table id="incomesList">
+                    <tr>
+                        <th>Data</th>
+                        <th>Kategoria</th>
+                        <th>Kwota</th>
+                    </tr>
+                    <tr>
+                        <td>2018-11-01</td>
+                        <td>Wynagrodzenie</td>
+                        <td>3500.00</td>
+                    </tr>
+                    <tr>
+                        <td>2018-11-15</td>
+                        <td>Przychód dodatkowy - 500+</td>
+                        <td>500.00</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-6 moneyList">
+                <p>Lista wydatków</p>
+                <table id="expensesList">
+                    <tr>
+                        <th>Data</th>
+                        <th>Kategoria</th>
+                        <th>Kwota</th>
+                    </tr>
+                    <tr>
+                        <td>2018-11-04</td>
+                        <td>Rachunki</td>
+                        <td>1543.45</td>
+                    </tr>
+                    <tr>
+                        <td>2018-11-07</td>
+                        <td>Paliwo</td>
+                        <td>675.45</td>
+                    </tr>
+                    <tr>
+                        <td>2018-11-12</td>
+                        <td>Wydatki podstawowe</td>
+                        <td>1785.33</td>
+                    </tr>
+                    <tr>
+                        <td>2018-11-16</td>
+                        <td>Rozrywka</td>
+                        <td>326.78</td>
+                    </tr>
+                    <tr>
+                        <td>2018-11-20</td>
+                        <td>Inwestycje</td>
+                        <td>789.56</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="row">
+
+            <div class="col-md-9">
+                <span><b>2018 &copy; Krzysztof Kozłowski</b> Wszelkie prawa zastrzeżone</span>
+            </div>
+
+            <div class="col-md-2">
+                <a href="https://pl.linkedin.com/in/krzysztofkozlowski1" target="_blank"><i class="demo-icon icon-linkedin"></i></a>
+                <a href="https://github.com/krzysztof-kozlowski" target="_blank"><i class="demo-icon icon-github"></i></a>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="chart.js"></script>
+
+
+</body>
+
+</html>
