@@ -65,3 +65,35 @@
     width: 100%; 
     min-height: 350px;
 }
+
+.moneyList {
+    margin-top: 5px;
+    color: #385623;
+    font-size: 14px;
+}
+
+.moneyList p {
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#incomesList {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+#incomesList td {
+    border-bottom: 1px dashed rgb(156, 156, 156);
+}
+
+#expensesList {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+#expensesList td {
+    border-bottom: 1px dashed rgb(156, 156, 156);
+}
