@@ -3,7 +3,7 @@ body {
 }
 
 #period-datepicker {
-    background-color: #33A835;
+    background-color: #A2D7A3;
     margin-top: 20px;
     padding: 10px;
 }
@@ -21,6 +21,12 @@ body {
     box-shadow: 0px 0px 7px 3px #385633;   
     border: 2px solid #a5cda5;
     background-color: #e9f3e9;
+    color: #385623; 
+}
+
+#period-datepicker p {
+    font-size: 20px;
+    font-weight: bold;
     color: #385623; 
 }
 
@@ -44,6 +50,7 @@ body {
 
 .dropdown-menu li {
     width: 200px;
+    margin: 2px;
 }
 
 .dropdown-menu a {
@@ -52,13 +59,14 @@ body {
 }
 
 .dropdown-menu a:hover {
-    color: #666;
+    color: #385623;
+    font-weight: bold;
     text-decoration: none;
 }
 
 .main-content {
     min-height: 100%;
-    background-color: #A2D7A3;
+    background-color: #f2f2f2;
 }
 
 #piechart1 {
