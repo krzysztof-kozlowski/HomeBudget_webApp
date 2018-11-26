@@ -110,3 +110,14 @@ body {
 #expensesList td {
     border-bottom: 1px dashed rgb(156, 156, 156);
 }
+
+#welcome-screen {
+    background-color: #fff;
+    min-height: 80vh;
+}
+
+#welcome-screen p {
+    color: #33A835;
+    font-size: 25px;
+    font-weight: bold;
+}

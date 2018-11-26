@@ -28,63 +28,6 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="javascript.js"></script>
 
-    <script>
-        // Load google charts
-        google.charts.load('current', { 'packages': ['corechart'] });
-        google.charts.setOnLoadCallback(drawExpensesChart);
-        google.charts.setOnLoadCallback(drawBudgetChart);
-
-        // Draw the chart and set the chart values
-        function drawExpensesChart() {
-            var dataExpenses = google.visualization.arrayToDataTable([
-                ['Expense', 'amount'],
-                ['Rachunki', 1543.45],
-                ['Paliwo', 675.45],
-                ['Wydatki podstawowe', 1785.33],
-                ['Rozrywka', 326.78],
-                ['Inwestycje', 789.56]
-            ]);
-
-            // Optional; add a title and set the width and height of the chart
-            var options1 = {
-                'title': 'Wydatki', 'titleTextStyle': {
-                    color: '#385623', fontSize: 18, bold: true
-                }, 'legend': 'none', 'backgroundColor': '#A2D7A3'
-            };
-
-            // Display the chart inside the <div> element with id="piechart"
-            var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
-            chart.draw(dataExpenses, options1);
-        }
-
-        function drawBudgetChart() {
-            var dataBudget = google.visualization.arrayToDataTable([
-                ['Budget', 'amount'],
-                ['Pozostały budżet', 250.00],
-                ['Wydatki', 3750.00],
-            ]);
-
-            // Optional; add a title and set the width and height of the chart
-            var options2 = {
-                'title': 'Budżet miesięczny', 'titleTextStyle': {
-                    color: '#385623', fontSize: 18, bold: true
-                }, 'legend': 'none', 'backgroundColor': '#A2D7A3'
-            };
-
-            // Display the chart inside the <div> element with id="piechart"
-            var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
-            chart.draw(dataBudget, options2);
-        }
-
-
-        $(window).resize(function () {
-            drawExpensesChart();
-            drawBudgetChart();
-        });
-    </script>
-
-
-
     <!--[if lt IE 9]>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
 	<![endif]-->
@@ -97,7 +40,7 @@
 
     <nav class="navbar bg-white navbar-light navbar-expand-lg">
 
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="main-menu.html">
             <img src="img/logo_obraz.png" class="d-inline-block mr-1 align-bottom" alt="" />
             <h1 class="d-none d-sm-inline-block">HomeBudget</h1>
         </a>
@@ -128,8 +71,18 @@
         </div>
     </nav>
 
+    <section id="welcome-screen">
+        <div class="container">
+            <div class="row justify-content-center mt-5">
+                <div>
+                    <p class="text-center">Witaj w HomeBudget!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
-        <div class="row">
+        <div class="row border">
 
             <div class="col-md-9">
                 <span><b>2018 &copy; Krzysztof Kozłowski</b> Wszelkie prawa zastrzeżone</span>
