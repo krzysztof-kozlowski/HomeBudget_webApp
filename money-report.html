@@ -28,63 +28,6 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="javascript.js"></script>
 
-    <script>
-        // Load google charts
-        google.charts.load('current', { 'packages': ['corechart'] });
-        google.charts.setOnLoadCallback(drawExpensesChart);
-        google.charts.setOnLoadCallback(drawBudgetChart);
-
-        // Draw the chart and set the chart values
-        function drawExpensesChart() {
-            var dataExpenses = google.visualization.arrayToDataTable([
-                ['Expense', 'amount'],
-                ['Rachunki', 1543.45],
-                ['Paliwo', 675.45],
-                ['Wydatki podstawowe', 1785.33],
-                ['Rozrywka', 326.78],
-                ['Inwestycje', 789.56]
-            ]);
-
-            // Optional; add a title and set the width and height of the chart
-            var options1 = {
-                'title': 'Wydatki', 'titleTextStyle': {
-                    color: '#385623', fontSize: 18, bold: true
-                }, 'legend': 'none', 'backgroundColor': '#f2f2f2'
-            };
-
-            // Display the chart inside the <div> element with id="piechart"
-            var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
-            chart.draw(dataExpenses, options1);
-        }
-
-        function drawBudgetChart() {
-            var dataBudget = google.visualization.arrayToDataTable([
-                ['Budget', 'amount'],
-                ['Pozostały budżet', 250.00],
-                ['Wydatki', 3750.00],
-            ]);
-
-            // Optional; add a title and set the width and height of the chart
-            var options2 = {
-                'title': 'Budżet miesięczny', 'titleTextStyle': {
-                    color: '#385623', fontSize: 18, bold: true
-                }, 'legend': 'none', 'backgroundColor': '#f2f2f2'
-            };
-
-            // Display the chart inside the <div> element with id="piechart"
-            var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
-            chart.draw(dataBudget, options2);
-        }
-
-
-        $(window).resize(function () {
-            drawExpensesChart();
-            drawBudgetChart();
-        });
-    </script>
-
-
-
     <!--[if lt IE 9]>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
 	<![endif]-->
@@ -245,12 +188,10 @@
         </div>
     </footer>
 
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="chart.js"></script>
-
 
 </body>
 
