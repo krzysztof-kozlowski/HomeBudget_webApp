@@ -15,9 +15,9 @@
     <meta name="author" content="Krzysztof Kozłowski">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="user-menu.css">
+    <link rel="stylesheet" href="css_bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/user-menu.css">
     <link rel="stylesheet" href="css_fontello/fontello.css">
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -26,64 +26,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="javascript.js"></script>
-
-    <script>
-        // Load google charts
-        google.charts.load('current', { 'packages': ['corechart'] });
-        google.charts.setOnLoadCallback(drawExpensesChart);
-        google.charts.setOnLoadCallback(drawBudgetChart);
-
-        // Draw the chart and set the chart values
-        function drawExpensesChart() {
-            var dataExpenses = google.visualization.arrayToDataTable([
-                ['Expense', 'amount'],
-                ['Rachunki', 1543.45],
-                ['Paliwo', 675.45],
-                ['Wydatki podstawowe', 1785.33],
-                ['Rozrywka', 326.78],
-                ['Inwestycje', 789.56]
-            ]);
-
-            // Optional; add a title and set the width and height of the chart
-            var options1 = {
-                'title': 'Wydatki', 'titleTextStyle': {
-                    color: '#385623', fontSize: 18, bold: true
-                }, 'legend': 'none', 'backgroundColor': '#A2D7A3'
-            };
-
-            // Display the chart inside the <div> element with id="piechart"
-            var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
-            chart.draw(dataExpenses, options1);
-        }
-
-        function drawBudgetChart() {
-            var dataBudget = google.visualization.arrayToDataTable([
-                ['Budget', 'amount'],
-                ['Pozostały budżet', 250.00],
-                ['Wydatki', 3750.00],
-            ]);
-
-            // Optional; add a title and set the width and height of the chart
-            var options2 = {
-                'title': 'Budżet miesięczny', 'titleTextStyle': {
-                    color: '#385623', fontSize: 18, bold: true
-                }, 'legend': 'none', 'backgroundColor': '#A2D7A3'
-            };
-
-            // Display the chart inside the <div> element with id="piechart"
-            var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
-            chart.draw(dataBudget, options2);
-        }
-
-
-        $(window).resize(function () {
-            drawExpensesChart();
-            drawBudgetChart();
-        });
-    </script>
-
-
+    <script src="js/javascript.js"></script>
 
     <!--[if lt IE 9]>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -97,7 +40,7 @@
 
     <nav class="navbar bg-white navbar-light navbar-expand-lg">
 
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="main-menu.html">
             <img src="img/logo_obraz.png" class="d-inline-block mr-1 align-bottom" alt="" />
             <h1 class="d-none d-sm-inline-block">HomeBudget</h1>
         </a>
@@ -122,7 +65,7 @@
                     <a class="nav-link" href="#"> Ustawienia </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link special" href="#"> Wyloguj </a>
+                    <a class="nav-link special" href="logout.html"> Wyloguj </a>
                 </li>
             </ul>
         </div>
@@ -131,6 +74,9 @@
     <div class="container-fluid">
         <div class="row input-daterange input-group justify-content-center" id="period-datepicker">
 
+            <div class="col-12 text-center">
+                <p>Przeglądaj bilans</p>
+            </div>
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="form-item text-center">
                     <input class="input-sm form-control" type="text" id="start-date" name="start" placeholder="Wybierz datę startową"
@@ -242,12 +188,10 @@
         </div>
     </footer>
 
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="chart.js"></script>
-
+    <script src="js_bootstrap/bootstrap.min.js"></script>
+    <script src="js/chart.js"></script>
 
 </body>
 
