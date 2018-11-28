@@ -26,7 +26,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="js/javascript.js"></script>
 
     <!--[if lt IE 9]>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -81,13 +80,22 @@
         </div>
     </div>
 
-    <div class="container-fluid">
-        <div class="row main-content">
-
-            <div class="col"></div>
-
+    <section id="add-income">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="text-center col-sm-10 col-md-6">
+                    <input type="text" placeholder="Kwota" onfocus="this.placeholder=''" onblur="this.placeholder='Kwota'" />
+                    <input type="date" name="income" value="data" />
+                    <p>Wybierz rodzaj przychodu</p>
+                    <label><input type="radio" name="income" value="wynagrodzenie" checked="checked" /> Wynagrodzenie</label>
+                    <label><input type="radio" name="income" value="przychódDodatkowy" /> Przychód dodatkowy</label>
+                    <label><input type="radio" name="income" value="inwestycja" /> Zwrot z inwestycji</label>
+                    <textarea name="comments" onfocus="this.placeholder=''" onblur="this.placeholder='Wpisz swój komentarz...'">Wpisz swój komentarz...</textarea>
+                    <input type="submit" value="Dodaj" />
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
     <footer>
         <div class="row">
@@ -107,6 +115,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="js_bootstrap/bootstrap.min.js"></script>
+    <script src="js/javascript.js"></script>
 
 </body>
 
