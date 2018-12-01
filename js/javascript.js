@@ -19,7 +19,56 @@ $(document).ready(function () {
     spanEnd.text(end);
   })
 });
-// VALIDATE THE LOGIN FORM //
+
+// ***** VALIDATE THE REGISTER FORM ***** //
+
+function isCorrectRegistrationUserInfo() {
+  var name = isCorrectName();
+  //var email = ;
+  var login = isCorrectUserLoginInRegister();
+  //var password = isCorrectPassword();
+
+  if ((name == true) && (email == true) && (login == true) && (password == true)) {
+    return true;
+  }
+  else
+    return false;
+}
+
+function isCorrectName() {
+  if (document.getElementById('register-form').name.value.length < 2) {
+    document.getElementById('user-name').style.border = '2px solid #ff4d4d';
+    return false;
+  } else {
+    document.getElementById('user-name').style.border = '2px solid #ddd';
+    return true;
+  }
+}
+
+function isCorrectUserLoginInRegister() {
+  if (document.getElementById('register-form').login.value.length < 2) {
+    document.getElementById('user-login-register').style.border = '2px solid #ff4d4d';
+    return false;
+  } else {
+    document.getElementById('user-login-register').style.border = '2px solid #ddd';
+    return true;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ***** VALIDATE THE LOGIN FORM ***** //
+
 function isCorrectUserData() {
   var login = isCorrectLogin();
   var password = isCorrectPassword();
