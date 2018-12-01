@@ -19,19 +19,19 @@ $(document).ready(function () {
     spanEnd.text(end);
   })
 });
+// VALIDATE THE LOGIN FORM //
+function isCorrectUserData() {
+  var login = isCorrectLogin();
+  var password = isCorrectPassword();
 
-function checkForm() {
-  var isCorrectLogin = checkLogin();
-  var isCorrectPassword = checkPassword();
-
-  if ((isCorrectLogin == true) && (isCorrectPassword == true)) {
+  if ((login == true) && (password == true)) {
     return true;
   }
   else
     return false;
 }
 
-function checkLogin() {
+function isCorrectLogin() {
   if (document.getElementById('login-form').login.value.length < 1) {
     document.getElementById('user-login').style.border = '2px solid #ff4d4d';
     return false;
@@ -41,7 +41,7 @@ function checkLogin() {
   }
 }
 
-function checkPassword() {
+function isCorrectPassword() {
   if (document.getElementById('login-form').password.value.length < 1) {
     document.getElementById('user-password').style.border = '2px solid #ff4d4d';
     return false;
