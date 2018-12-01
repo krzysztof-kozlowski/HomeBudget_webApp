@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Witaj w HomeBudget</title>
-    <meta name="description" content="Zarządzaj swoimi finansami dzięki aplikacji HomeBudget">
+    <meta name="description" content="Zaloguj się w aplikacji HomeBudget">
     <meta name="keywords" content="witaj, home, budget, logowanie, budżet, domowy, finanse, przychody, dochody, wydatki, analiza, zarządzanie, pieniądze">
     <meta name="author" content="Krzysztof Kozłowski">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -51,9 +51,13 @@
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="text-center col-sm-10 col-md-8">
-                                    <input type="text" placeholder="login" onfocus="this.placeholder=''" onblur="this.placeholder='login'">
-                                    <input type="password" placeholder="hasło" onfocus="this.placeholder=''" onblur="this.placeholder='hasło'">
-                                    <input type="submit" value="Kontynuuj" onclick="window.location='main-menu.html'">
+                                    <form id="login-form" action="main-menu.html" onsubmit="return checkForm()">
+                                        <input id="user-login" type="text" name="login" placeholder="login" onfocus="this.placeholder=''"
+                                            onblur="this.placeholder='login'" />
+                                        <input id="user-password" type="password" name="password" placeholder="hasło"
+                                            onfocus="this.placeholder=''" onblur="this.placeholder='hasło'" />
+                                        <input type="submit" value="Kontynuuj" />
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -84,6 +88,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="js_bootstrap/bootstrap.min.js"></script>
+    <script src="js/javascript.js"></script>
 
 </body>
 

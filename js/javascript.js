@@ -19,3 +19,34 @@ $(document).ready(function () {
     spanEnd.text(end);
   })
 });
+
+function checkForm() {
+  var isCorrectLogin = checkLogin();
+  var isCorrectPassword = checkPassword();
+
+  if ((isCorrectLogin == true) && (isCorrectPassword == true)) {
+    return true;
+  }
+  else
+    return false;
+}
+
+function checkLogin() {
+  if (document.getElementById('login-form').login.value.length < 1) {
+    document.getElementById('user-login').style.border = '2px solid #ff4d4d';
+    return false;
+  } else {
+    document.getElementById('user-login').style.border = '2px solid #ddd';
+    return true;
+  }
+}
+
+function checkPassword() {
+  if (document.getElementById('login-form').password.value.length < 1) {
+    document.getElementById('user-password').style.border = '2px solid #ff4d4d';
+    return false;
+  } else {
+    document.getElementById('user-password').style.border = '2px solid #ddd';
+    return true;
+  }
+}
