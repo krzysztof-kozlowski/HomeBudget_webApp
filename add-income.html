@@ -19,13 +19,19 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/user-menu.css">
     <link rel="stylesheet" href="css_fontello/fontello.css">
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script>
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+    </script>
 
     <!--[if lt IE 9]>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -85,7 +91,10 @@
             <div class="row justify-content-center">
                 <div class="text-center col-sm-10 col-md-6">
                     <input type="text" placeholder="Kwota" onfocus="this.placeholder=''" onblur="this.placeholder='Kwota'" />
+                    <input type="text" id="datepicker">
+                    <!--
                     <input type="date" name="income" value="data" />
+                    -->
                     <p>Wybierz rodzaj przychodu</p>
                     <label><input type="radio" name="income" value="wynagrodzenie" checked="checked" /> Wynagrodzenie</label>
                     <label><input type="radio" name="income" value="przychódDodatkowy" /> Przychód dodatkowy</label>
@@ -115,7 +124,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="js_bootstrap/bootstrap.min.js"></script>
-    <script src="js/javascript.js"></script>
 
 </body>
 
