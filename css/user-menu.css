@@ -121,3 +121,73 @@ body {
     font-size: 25px;
     font-weight: bold;
 }
+
+#add-income {
+    margin-top: 20px;
+}
+
+#add-income p {
+    margin-top: 15px;
+    color: #33A835;
+    font-size: 18px;
+    font-weight: bold;   
+}
+
+textarea {
+    margin-top: 10px;
+    width: 90%;
+    background-color: #f2f2f2;
+    color: #666;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 15px;    
+    padding: 5px;
+    margin-top: 10px;   
+}
+
+label {
+    width: 100%;
+}
+
+input[type=text],
+input[type=date] {
+    width: 90%;
+    background-color: #f2f2f2;
+    color: #666;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 15px;    
+    padding: 5px;
+    margin-top: 10px;
+}
+
+input[type=text]:focus,
+input[type=date]:focus {
+    box-shadow: 0px 0px 7px 3px #385633;   
+    border: 2px solid #a5cda5;
+    background-color: #e9f3e9;
+    color: #385623; 
+}
+
+input[type=submit] {
+    width: 60%;
+    background-color: #36b03c;
+    font-size: 18px;
+    color: #ffffff;
+    padding: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+input[type=submit]:hover {
+    background-color: #37b93d;
+    box-shadow: 0px 0px 7px 3px #385633;
+}
+
+input[type=submit]:focus {
+    box-shadow: 0px 0px 7px 3px #385633;   
+}
