@@ -22,20 +22,20 @@ $(document).ready(function () {
 
 // ***** VALIDATE THE REGISTER FORM ***** //
 
-function isCorrectRegistrationUserInfo() {
-  var name = isCorrectName();
-  var login = isCorrectUserLoginInRegister();
-  var email = isCorrectEmail();
-  // var password = true;
+function isCorrectValidatedNewUser() {
+  var name = isWellFormattedName();
+  var login = isAvailableUser();
+  var email = isAvailableEmail();
+  var password = isWellFormattedPassword();
 
-  if ((name == true) && (login == true) && (email == true) /*&& (password == true)*/) {
+  if ((name == true) && (login == true) && (email == true) && (password == true)) {
     return true;
   }
   else
     return false;
 }
 
-function isCorrectName() {
+function isWellFormattedName() {
   if (document.getElementById('register-form').name.value.length < 1) {
     document.getElementById('user-name').style.border = '2px solid #ff4d4d';
     return false;
@@ -45,7 +45,7 @@ function isCorrectName() {
   }
 }
 
-function isCorrectUserLoginInRegister() {
+function isAvailableUser() {
   if (document.getElementById('register-form').login.value.length < 1) {
     document.getElementById('user-login-register').style.border = '2px solid #ff4d4d';
     return false;
@@ -55,7 +55,7 @@ function isCorrectUserLoginInRegister() {
   }
 }
 
-function isCorrectEmail() {
+function isAvailableEmail() {
   var reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   var email = document.getElementById('register-form').email.value;
 
@@ -68,21 +68,20 @@ function isCorrectEmail() {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
+function isWellFormattedPassword() {
+  if (document.getElementById('register-form').password.value.length < 1) {
+    document.getElementById('user-password-register').style.border = '2px solid #ff4d4d';
+    return false;
+  } else {
+    document.getElementById('user-password-register').style.border = '2px solid #ddd';
+    return true;
+  }
+}
 
 
 // ***** VALIDATE THE LOGIN FORM ***** //
 
-function isCorrectUserData() {
+function isAccessToUserAccount() {
   var login = isCorrectLogin();
   var password = isCorrectPassword();
 
