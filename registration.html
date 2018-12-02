@@ -51,12 +51,12 @@
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="text-center col-sm-10 col-md-8">
-                                    <form id="register-form" action="main-menu.html" onsubmit="return isCorrectRegistrationUserInfo()">
+                                    <form id="register-form" action="main-menu.html" onsubmit="return isCorrectValidatedNewUser()">
                                         <input id="user-name" type="text" name="name" placeholder="imię" onfocus="this.placeholder=''" onblur="this.placeholder='imię'" />
                                         <input id="user-login-register" type="text" name="login" placeholder="login" onfocus="this.placeholder=''" onblur="this.placeholder='login'" />
                                         <input id="user-email" type="text" name="email" placeholder="adres email" onfocus="this.placeholder=''"
                                             onblur="this.placeholder='adres email'" />
-                                        <input type="password" name="password" placeholder="hasło" onfocus="this.placeholder=''" onblur="this.placeholder='hasło'" />
+                                        <input id="user-password-register" type="password" name="password" placeholder="hasło" onfocus="this.placeholder=''" onblur="this.placeholder='hasło'" />
                                         <input type="submit" value="Kontynuuj" />
                                     </form>
                                 </div>
