@@ -24,11 +24,11 @@ $(document).ready(function () {
 
 function isCorrectRegistrationUserInfo() {
   var name = isCorrectName();
-  //var email = ;
   var login = isCorrectUserLoginInRegister();
-  //var password = isCorrectPassword();
+  var email = isCorrectEmail();
+  // var password = true;
 
-  if ((name == true) && (email == true) && (login == true) && (password == true)) {
+  if ((name == true) && (login == true) && (email == true) /*&& (password == true)*/) {
     return true;
   }
   else
@@ -36,7 +36,7 @@ function isCorrectRegistrationUserInfo() {
 }
 
 function isCorrectName() {
-  if (document.getElementById('register-form').name.value.length < 2) {
+  if (document.getElementById('register-form').name.value.length < 1) {
     document.getElementById('user-name').style.border = '2px solid #ff4d4d';
     return false;
   } else {
@@ -46,12 +46,25 @@ function isCorrectName() {
 }
 
 function isCorrectUserLoginInRegister() {
-  if (document.getElementById('register-form').login.value.length < 2) {
+  if (document.getElementById('register-form').login.value.length < 1) {
     document.getElementById('user-login-register').style.border = '2px solid #ff4d4d';
     return false;
   } else {
     document.getElementById('user-login-register').style.border = '2px solid #ddd';
     return true;
+  }
+}
+
+function isCorrectEmail() {
+  var reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  var email = document.getElementById('register-form').email.value;
+
+  if (reg.test(email)) {
+    document.getElementById('user-email').style.border = '2px solid #ddd';
+    return true;
+  } else {
+    document.getElementById('user-email').style.border = '2px solid #ff4d4d';
+    return false;
   }
 }
 
