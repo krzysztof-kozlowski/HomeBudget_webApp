@@ -51,13 +51,13 @@
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="text-center col-sm-10 col-md-8">
-                                    <form>
-                                        <input type="text" placeholder="imię" onfocus="this.placeholder=''" onblur="this.placeholder='imię'">
-                                        <input type="text" placeholder="login" onfocus="this.placeholder=''" onblur="this.placeholder='login'">
-                                        <input type="email" placeholder="adres email" onfocus="this.placeholder=''"
-                                            onblur="this.placeholder='adres email'">
-                                        <input type="password" placeholder="hasło" onfocus="this.placeholder=''" onblur="this.placeholder='hasło'">
-                                        <input type="submit" value="Kontynuuj" onclick="window.location='main-menu.html'">
+                                    <form id="register-form" action="main-menu.html" onsubmit="return isCorrectRegistrationUserInfo()">
+                                        <input id="user-name" type="text" name="name" placeholder="imię" onfocus="this.placeholder=''" onblur="this.placeholder='imię'" />
+                                        <input id="user-login-register" type="text" name="login" placeholder="login" onfocus="this.placeholder=''" onblur="this.placeholder='login'" />
+                                        <input id="user-email" type="text" name="email" placeholder="adres email" onfocus="this.placeholder=''"
+                                            onblur="this.placeholder='adres email'" />
+                                        <input type="password" name="password" placeholder="hasło" onfocus="this.placeholder=''" onblur="this.placeholder='hasło'" />
+                                        <input type="submit" value="Kontynuuj" />
                                     </form>
                                 </div>
                             </div>
@@ -89,6 +89,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="js_bootstrap/bootstrap.min.js"></script>
+    <script src="js/javascript.js"></script>
 
 </body>
 
