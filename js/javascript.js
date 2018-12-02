@@ -1,24 +1,35 @@
-// Make your own here: https://eternicode.github.io/bootstrap-datepicker
-$(document).ready(function () {
-  var dateSelect = $('#period-datepicker');
-  var startDate = $('#start-date');
-  var endDate = $('#end-date');
-  var spanStart = $('.date-depart');
-  var spanEnd = $('.date-return');
-  var spanDateFormat = 'YYYY, MM, DD';
+/*
+The MIT License (MIT)
+Copyright (c) 2012-2018 Dan Grossman
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+*/
 
-  dateSelect.datepicker({
-    autoclose: true,
-    format: "yyyy/mm/dd",
-    maxViewMode: 0,
-    startDate: "now"
-  }).on('change', function () {
-    var start = $.format.date(startDate.datepicker('getDate'), spanDateFormat);
-    var end = $.format.date(endDate.datepicker('getDate'), spanDateFormat);
-    spanStart.text(start);
-    spanEnd.text(end);
-  })
+// ***** DATE RANGE PICKER ***** //
+
+$(function () {
+  var start = moment().startOf('month');
+  var end = moment().endOf('month');
+
+  function cb(start, end) {
+    $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+  }
+
+  $('#reportrange').daterangepicker({
+    startDate: start,
+    endDate: end,
+    ranges: {
+      'Dzisiaj': [moment(), moment()],
+      'Wczoraj': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+      'Obecny miesiąc': [moment().startOf('month'), moment().endOf('month')],
+      'Poprzedni miesiąc': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')],
+      'Obecny rok': [moment().startOf('year'), moment().endOf('year')],
+    }
+  }, cb);
+
+  cb(start, end);
+
 });
+
 
 // ***** VALIDATE THE REGISTER FORM ***** //
 

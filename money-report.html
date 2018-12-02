@@ -20,14 +20,34 @@
     <link rel="stylesheet" href="css/user-menu.css">
     <link rel="stylesheet" href="css_fontello/fontello.css">
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
 
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+
+
+    <!--
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+    <!--
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="js/javascript.js"></script>
-
+-->
     <!--[if lt IE 9]>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
 	<![endif]-->
@@ -77,29 +97,15 @@
             <div class="col-12 text-center">
                 <p>Przeglądaj bilans</p>
             </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="form-item text-center">
-                    <input class="input-sm form-control" type="text" id="start-date" name="start" placeholder="Wybierz datę startową"
-                        data-date-format="YYYY, MM, DD" onblur="this.placeholder='Wybierz datę startową'" />
-                    <span class="date-text date-start"></span>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="form-item text-center">
-                    <input class="input-sm form-control" type="text" id="end-date" name="end" placeholder="Wybierz datę końcową"
-                        data-date-format="DD, MM d" onblur="this.placeholder='Wybierz datę końcową'" /><span class="date-text date-end"></span>
+
+
+            <div class="col-sm-6 col-md-4 col-lg-4">
+                <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+                    <i class="fa fa-calendar"></i>&nbsp;
+                    <span></span> <i class="fa fa-caret-down"></i>
                 </div>
             </div>
 
-            <div class="dropdown col-sm-6 col-md-4 col-lg-2 text-center">
-                <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Wybierz okres
-                    <span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Bieżący miesiąc</a></li>
-                    <li><a href="#">Poprzedni miesiąc</a></li>
-                    <li><a href="#">Bieżący rok</a></li>
-                </ul>
-            </div>
         </div>
     </div>
 
@@ -187,6 +193,18 @@
 
         </div>
     </footer>
+
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="js/moment.js"></script>
+    <script type="text/javascript" src="js/daterangepicker.js"></script>
+
+    <script src="js/javascript.js"></script>
+
+
+
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
