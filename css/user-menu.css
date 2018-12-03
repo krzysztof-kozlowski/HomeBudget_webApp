@@ -193,9 +193,35 @@ input[type=submit]:focus {
 }
 
 #reportrange {
-    background-color: #fff; 
+    background-color: #f2f2f2; 
     cursor: pointer; 
     padding: 5px 10px; 
-    border: 1px solid #ccc; 
-    width: 100%
+    border-radius: 5px; 
+    width: 100%;
+    color: #385623;
 }
+
+#incomesList th:first-child {
+    width: 25%;
+}
+
+#incomesList th:nth-child(2) {
+    width: 50%;
+}
+
+#incomesList th:nth-child(3) {
+    width: 25%;
+}
+
+#expensesList th:first-child {
+    width: 25%;
+}
+
+#expensesList th:nth-child(2) {
+    width: 50%;
+}
+
+#expensesList th:nth-child(3) {
+    width: 25%;
+}
+
