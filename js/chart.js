@@ -18,7 +18,7 @@
      var options1 = {
          'title': 'Wydatki', 'titleTextStyle': {
              color: '#385623', fontSize: 18, bold: true
-         }, 'legend': 'none', 'backgroundColor': '#f2f2f2'
+         }, 'legend': 'none', 'backgroundColor': '#fff'
      };
 
      // Display the chart inside the <div> element with id="piechart"
@@ -41,7 +41,7 @@
      var options2 = {
          'title': 'Budżet miesięczny', 'titleTextStyle': {
              color: '#385623', fontSize: 18, bold: true
-         }, 'legend': 'none', 'backgroundColor': '#f2f2f2'
+         }, 'legend': 'none', 'backgroundColor': '#fff'
      };
 
      // Display the chart inside the <div> element with id="piechart"

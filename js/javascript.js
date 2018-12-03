@@ -30,6 +30,19 @@ $(function () {
 
 });
 
+// ***** SIMPLE DATE PICKER ***** //
+
+$(function () {
+  $('input[name="birthday"]').daterangepicker({
+    singleDatePicker: true,
+    showDropdowns: true,
+    locale: {
+      format: 'MMM D, YYYY'
+    }
+  });
+});
+
+
 
 // ***** VALIDATE THE REGISTER FORM ***** //
 
